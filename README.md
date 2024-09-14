@@ -1,6 +1,5 @@
 # Brian Grimmett Blog and Documentation
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
-[mit]: https://github.com/BBGrimmett2/bbgrimmett2.github.io/blob/main/LICENSE
+[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]: https://github.com/BBGrimmett2/bbgrimmett2.github.io/blob/main/LICENSE
 
 Welcome to my blog and documentation hub! This space is dedicated to sharing solutions, ideas, and discoveries from my work and hobbies. You’ll find a variety of content, including:
 
