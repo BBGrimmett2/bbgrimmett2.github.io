@@ -1,5 +1,5 @@
 # Brian Grimmett Blog and Documentation
-![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)[mit]
 
 
 [![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]:https://github.com/BBGrimmett2/bbgrimmett2.github.io/blob/main/LICENSE
