@@ -26,6 +26,3 @@ package-lock.json
 _sass/dist
 assets/js/dist
 test.sh
-
-# Template Post
-_posts/2024-09-14-Placeholder.md
