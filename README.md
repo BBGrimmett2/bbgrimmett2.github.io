@@ -7,7 +7,6 @@ Welcome to my blog and documentation hub! This space is dedicated to sharing sol
 - **Blog Posts**: I share my thoughts and explorations on topics that interest me, including:
   - **Science**: Discussions and reflections on scientific breakthroughs and concepts.
   - **Urban Planning**: Thoughts on how cities evolve and shape our lives.
-  - **Photography**: Creative projects, techniques, and tips from my photography endeavors.
   - **And more**: From tech curiosities to everyday challenges, anything that sparks my interest!
 
 Feel free to explore and engage with the content. I hope you find something valuable or inspiring!

@@ -16,7 +16,7 @@ timezone: America/Chicago
 
 title: Brian Grimmett # the main title
 
-tagline: A blog and documentation hub focused on implementations, homelab projects, and insightful posts on topics like science, urban planning, photography, and more # it will display as the subtitle
+tagline: A blog and documentation hub focused on implementations, homelab projects, and insightful posts on topics like technology, science, urban planning, and more # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A place for documentation, research, and more
