@@ -35,6 +35,7 @@ You can also apply instance groups at the inventory level for finer control.
 For example:
 > The Linux team is responsible for two data centers: **DC-East** and **DC-West**. Each has its own isolated execution node group. By assigning the corresponding instance group to each inventory, AAP ensures jobs targeting **DC-East** only run on nodes with network access to **DC-East**, and the same for **DC-West**. This guarantees geographic and network isolation without needing complex job templates or credential rules.
 
+```mermaid
 graph TD
     subgraph Organization
         NET[Networking Team]
@@ -60,6 +61,7 @@ graph TD
     LNX --> IG_LNX_DC2
     IG_LNX_DC1 --> INV_LNX_DC1
     IG_LNX_DC2 --> INV_LNX_DC2
+```
 
 These instance groups rely on **Receptor** to move automation job data and coordination messages across the mesh. Receptor ensures that communication between the controller and execution nodes is secure, resilient, and network-aware.
 
