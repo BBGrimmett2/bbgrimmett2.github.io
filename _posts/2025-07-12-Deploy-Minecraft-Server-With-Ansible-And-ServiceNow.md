@@ -1,7 +1,7 @@
 ---
 title: "Deploying a Vanilla Minecraft Server Through ServiceNow and Ansible Automation Platform"
 author: bbgrimmett2
-date: 2025-07-07 12:00:00 -0600
+date: 2025-07-12 12:00:00 -0600
 categories: [Ansible, Demos]
 tags: [homelab]
 render_with_liquid: false
