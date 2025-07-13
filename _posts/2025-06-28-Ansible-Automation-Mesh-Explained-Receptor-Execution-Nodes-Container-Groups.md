@@ -1,6 +1,6 @@
 ---
 title: "Ansible Automation Mesh Explained: Receptor, Execution Nodes, and Container Groups"
-author: Brian Grimmett
+author: bbgrimmett2
 date: 2025-06-28 12:00:00 -0600
 categories: [Ansible, Infrastructure]
 tags: [homelab]

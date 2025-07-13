@@ -1,15 +1,12 @@
 ---
 title: "Deploying a Vanilla Minecraft Server Through ServiceNow and Ansible Automation Platform"
-author: Brian Grimmett
+author: bbgrimmett2
 date: 2025-07-07 12:00:00 -0600
 categories: [Ansible, Demos]
 tags: [homelab]
 render_with_liquid: false
 mermaid: true
 ---
-
-# Deploying Vanilla Minecraft Service Through ServiceNow and Ansible Automation Platform
-
 ## Introduction
 
 What if provisioning infrastructure was as easy, and fun, as launching a Minecraft server?
@@ -17,7 +14,7 @@ What if provisioning infrastructure was as easy, and fun, as launching a Minecra
 In this post, we will walk through how to deploy a **Vanilla Minecraft server** using **Ansible Automation Platform**(AAP) and **ServiceNow**(SNOW). While it may sound like just a fun side project, this demo highlights how enterprise-grade tools can deliver **governed, repeatable, and self-service automation**, even for complex environments.
 
 You might be thinking: *“Sure, but what does Minecraft have to do with enterprise IT?”*  
-Here’s the trick, **Minecraft is just a Java application running on a server**. What we’re really demonstrating is a reusable pattern for deploying pre-baked application environments. The same techniques could apply to **Tomcat, .NET apps, nginx, database servers**, or other internal services. It’s a fun way to explore serious automation.
+Here’s the trick, **Minecraft is just a Java application running on a server**. What we’re really demonstrating is a reusable pattern for deploying pre-baked application environments. The same techniques could apply to **Tomcat, .NET apps, Nginx, database servers**, or other internal services. It’s a fun way to explore serious automation.
 
 We’ll walk through the playbook design, the ServiceNow integration, and how this architecture maps to real-world workflows you’d find in a modern enterprise environment.
 
@@ -640,7 +637,7 @@ This same pattern can be applied across enterprise IT to deploy databases, appli
 
 As automation matures, so too should our ability to make it accessible, scalable, and fun. Whether you’re deploying Minecraft or mission-critical infrastructure, the tools and patterns are the same.
 
-> Want to try this out yourself or adapt it for your team?  
+> Want to try this out yourself or adapt it?  
 > Check out the [full GitHub repo](https://github.com/BBGrimmett2/Starbase-Vanilla-Minecraft-Deploy) to get started.
 
 ---
