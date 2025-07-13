@@ -1,5 +1,6 @@
 ---
 title: "Deploying a Vanilla Minecraft Server Through ServiceNow and Ansible Automation Platform"
+description: Learn how to automate the deployment of a Vanilla Minecraft server using Ansible Automation Platform and ServiceNow. This hands-on demo showcases how enterprise-grade tools enable self-service, governed, and repeatable application provisioning—even for game servers. A fun, practical example of real-world automation patterns.
 author: bbgrimmett2
 date: 2025-07-12 12:00:00 -0600
 categories: [Ansible, Demos]
@@ -642,11 +643,11 @@ As automation matures, so too should our ability to make it accessible, scalable
 
 ---
 
-## References
+## Sources
 - [GitHub - Ansible Collection community.proxmox](https://github.com/ansible-collections/community.proxmox)  
 - [GitHub - Starbase Minecraft Playbook](https://github.com/BBGrimmett2/Starbase-Vanilla-Minecraft-Deploy)  
 - [GitHub Shadowman - ServiceNow Ansible Setup](https://github.com/shadowman-lab/Ansible-SNOW/tree/main/SNOWSetup)  
-- [Github - mcrcon by Tiiffi](https://github.com/Tiiffi/mcrcon)  
+- [GitHub - mcrcon by Tiiffi](https://github.com/Tiiffi/mcrcon)  
 - [LinkedIn - Alex Dworjan](https://www.linkedin.com/in/alexanderdworjan/)  
 - [Minecraft Server Setup](https://www.minecraft.net/en-us/download/server)  
 - [Minecraft Wiki Tutorial](https://minecraft.wiki/w/Tutorial:Setting_up_a_Java_Edition_server)  
