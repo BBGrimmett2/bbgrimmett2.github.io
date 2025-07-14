@@ -7,8 +7,6 @@ categories: [Ansible, Demos]
 tags: [homelab]
 render_with_liquid: false
 mermaid: true
-image:
-  lqip: assets/img/avatar.png
 ---
 ## Introduction
 
