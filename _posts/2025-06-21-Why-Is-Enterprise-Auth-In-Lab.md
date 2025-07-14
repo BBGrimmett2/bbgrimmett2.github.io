@@ -1,6 +1,6 @@
 ---
 title: Why is Enterprise Authentication Worth Setting Up in a HomeLab?
-author: Brian Grimmett
+author: bbgrimmett2
 date: 2025-06-21 12:00:00 -0600
 categories: [HomeLab, Authentication]
 tags: [homelab]
