@@ -51,7 +51,7 @@ These values will drive the configuration of the Minecraft instance, define who 
 
 #### Step 1: Clean Up and Assertions
 
-The first part of the playbook ensures **idempotency** by stopping and removing any previously deployed Minecraft server. This prevents conflicts during redeployment and avoids stale configuration or leftover files from earlier runs. When testing changes to the playbook, this step is especially useful—it guarantees that every run reflects the latest logic and variables at runtime.
+The first part of the playbook starts by stopping and removing any previously deployed Minecraft server. This prevents conflicts during redeployment and avoids stale configuration or leftover files from earlier runs. When testing changes to the playbook, this step is especially useful—it guarantees that every run reflects the latest logic and variables at runtime.
 
 ```yaml
 - name: Ensure no existing Minecraft server
@@ -391,35 +391,32 @@ To finalize the end-to-end automation, we update the ServiceNow request item (RI
 ```yaml
 - name: Comment on ServiceNow RITM
   block:
-    - name: Get sys_id
-      ansible.builtin.uri:
-        url: "https://{{ servicenow_instance }}/api/now/table/sc_req_item?sysparm_query=number={{ snow_rtim }}"
-        method: GET
-        user: "{{ servicenow_user }}"
-        password: "{{ servicenow_password }}"
-        force_basic_auth: true
-        headers:
-          Accept: "application/json"
-          Content-Type: "application/json"
-        return_content: true
+    - name: "Retrieve RITM"
+      servicenow.itsm.api_info:
+        instance: 
+          grant_type: password
+          host: "{{ servicenow_instance }}"
+          username: "{{ servicenow_user }}"
+          password: "{{ servicenow_password }}"
+        resource: sc_req_item
+        sysparm_query: "number={{ ritm_number }}"
       register: ritm_lookup
 
-    - name: Save sys_id
-      ansible.builtin.set_fact:
-        ritm_sys_id: "{{ ritm_lookup.json.result[0].sys_id }}"
+    - name: "Extract 'sys_id' from 'rtim_lookup'"
+      set_fact:
+        sys_id: "{{ ritm_lookup.record[0].sys_id }}"
 
-    - name: Post comment
-      ansible.builtin.uri:
-        url: "https://{{ servicenow_instance }}/api/now/table/sc_req_item/{{ ritm_sys_id }}"
-        method: PATCH
-        user: "{{ servicenow_user }}"
-        password: "{{ servicenow_password }}"
-        force_basic_auth: true
-        headers:
-          Accept: "application/json"
-          Content-Type: "application/json"
-        body_format: json
-        body:
+    - name: "Post comment with server information"
+      servicenow.itsm.api:
+        instance: 
+          grant_type: password
+          host: "{{ servicenow_instance }}"
+          username: "{{ servicenow_user }}"
+          password: "{{ servicenow_password }}"
+        resource: sc_req_item
+        sys_id: "{{ sys_id }}"
+        action: patch
+        data:
           comments: |
             ✅ Minecraft Server Deployment Complete
             🌍 World Name: {{ world_name }}
@@ -429,6 +426,7 @@ To finalize the end-to-end automation, we update the ServiceNow request item (RI
             🌱 Seed: {{ world_seed }}
             🖥️ Host: {{ ansible_hostname }}
       when: snow_rtim is defined and snow_rtim | length > 0
+
 ```
 
 ### Post-Deployment Validation
